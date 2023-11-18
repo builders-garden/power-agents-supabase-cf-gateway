@@ -2,7 +2,7 @@
 
 This package implements a simple CCIP-read gateway worker for ENS offchain resolution, using Supabase as the database for the names.
 
-The work is based on [this example](https://github.com/ensdomains/offchain-resolver/tree/main/packages/gateway-worker) from ENS.
+The work is based on [this example](https://github.com/gskril/ens-offchain-registrar/tree/main) from ENS.
 
 ## Usage:
 
