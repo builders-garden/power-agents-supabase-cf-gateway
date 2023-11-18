@@ -6192,12 +6192,17 @@ iterator.prototype@^1.1.2:
     reflect.getprototypeof "^1.0.4"
     set-function-name "^2.0.1"
 
+itty-cors@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/itty-cors/-/itty-cors-0.3.6.tgz#25fae83ee23203c6d35188b9352a1d17b21a5271"
+  integrity sha512-VlDDB9CLneCyjqtg8kShl6oBZrJxxwKd8sXWrYC77H6BcW9sDMRDwx7JgCB2T+18pQv/Tau3OIlchEKrEHKKKQ==
+
 itty-router@^2.6.1:
   version "2.6.6"
   resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-2.6.6.tgz#78a08c3b7dc1bd90ce832cae8eff7e4cbfbf67ef"
   integrity sha512-hIPHtXGymCX7Lzb2I4G6JgZFE4QEEQwst9GORK7sMYUpJvLfy4yZJr95r04e8DzoAnj6HcxM2m4TbK+juu+18g==
 
-itty-router@^4.0.23:
+itty-router@^4.0.14:
   version "4.0.23"
   resolved "https://registry.yarnpkg.com/itty-router/-/itty-router-4.0.23.tgz#44bb79134567773d3356e9972913e8fd6ed8a7a0"
   integrity sha512-tP1NI8PVK43vWlBnIPqj47ni5FDSczFviA4wgBznscndo8lEvBA+pO3DD1rNbIQPcZhprr775iUTunyGvQMcBw==

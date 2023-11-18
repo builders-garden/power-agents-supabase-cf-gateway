@@ -1,9 +1,10 @@
-import { Router, createCors } from "itty-router";
+import { Router } from "itty-router";
 
 import { Env } from "./env";
 import { getCcipRead, getName, getNames } from "./handlers";
+import { createCors } from "itty-cors";
 
-const { preflight, corsify } = createCors();
+const { preflight, corsify } = createCors({ origins: ["*"] });
 const router = Router();
 
 router
