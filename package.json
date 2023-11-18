@@ -1,0 +1,39 @@
+{
+  "name": "ens-supabase-cf-gateway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "start": "wrangler dev",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "clean": "rm -fr node_modules dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chainlink/ethers-ccip-read-provider": "^0.2.3",
+    "@cloudflare/workers-types": "^4.20231025.0",
+    "@ensdomains/ccip-read-cf-worker": "^0.0.1",
+    "@ensdomains/ens-contracts": "^0.0.22",
+    "@ensdomains/offchain-resolver-contracts": "^0.2.1",
+    "@supabase/supabase-js": "^2.38.4",
+    "dotenv": "^16.3.1",
+    "ethers": "^5.7.2",
+    "itty-router": "^2.6.1"
+  },
+  "devDependencies": {
+    "tsdx": "^0.14.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "wrangler": "^3.16.0"
+  }
+}
