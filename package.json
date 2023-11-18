@@ -28,7 +28,8 @@
     "@supabase/supabase-js": "^2.38.4",
     "dotenv": "^16.3.1",
     "ethers": "^5.7.2",
-    "itty-router": "^2.6.1"
+    "itty-router": "^4.0.23",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "tsdx": "^0.14.1",

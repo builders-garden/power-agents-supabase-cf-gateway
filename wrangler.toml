@@ -1,0 +1,13 @@
+name = "offchain-gateway"
+compatibility_date = "2023-11-18"
+account_id = "22d45f18ecf6b4bfb208f0221374e11c"
+main = "./src/index.ts"
+node_compat = true
+
+[dev]
+port = 8000
+
+[build]
+command = "yarn build"
+
+[vars]

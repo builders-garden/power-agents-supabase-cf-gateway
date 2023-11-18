@@ -1,23 +1,21 @@
-import { createClient } from "@supabase/supabase-js";
-import { ethers } from "ethers";
-import { makeApp } from "./server";
+import { Router, createCors } from "itty-router";
 
-const routeHandler = (env: any) => {
-  const { PRIVATE_KEY, SUPABASE_SERVICE_KEY, SUPABASE_URL } = env;
-  const privateKey = PRIVATE_KEY as string;
-  //   const address = ethers.utils.computeAddress(privateKey);
-  const signer = new ethers.utils.SigningKey(privateKey);
-  const supabaseClient = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY);
+import { Env } from "./env";
+import { getCcipRead, getName, getNames } from "./handlers";
 
-  const app = makeApp(signer, supabaseClient, "/");
+const { preflight, corsify } = createCors();
+const router = Router();
 
-  return app;
-};
+router
+  .all("*", preflight)
+  .get("/lookup/*", (request, env) => getCcipRead(request, env))
+  .get("/get/:name", (request, env) => getName(request, env))
+  .get("/names", (request, env) => getNames(env))
+  .all("*", () => new Response("Not found", { status: 404 }));
 
-module.exports = {
-  fetch: function(request: Request, env: any, _context: any) {
-    const router = routeHandler(env);
-
-    return router.handle(request) as any;
+// Handle requests to the Worker
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    return router.handle(request, env).then(corsify);
   },
 };
