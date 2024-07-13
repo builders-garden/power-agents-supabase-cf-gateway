@@ -1,5 +1,5 @@
 {
-  "name": "ens-supabase-cf-gateway",
+  "name": "evm-actions-supabase-cf-gateway",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
