@@ -16,7 +16,7 @@ export async function getNames(env: Env) {
         ...acc,
         [name.name]: {
           addresses: name.addresses,
-          texts: name.texts,
+          text: name.text,
           contenthash: name.contenthash,
         },
       };

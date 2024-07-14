@@ -4,7 +4,7 @@ export const ZodName = z.object({
   name: z.string().regex(/^[a-z0-9-.]+$/),
   owner: z.string(),
   addresses: z.record(z.any()).optional(),
-  texts: z.record(z.any()).optional(),
+  text: z.record(z.any()).optional(),
   contenthash: z.string().optional(),
 });
 
@@ -22,6 +22,6 @@ export interface NameInSupabase {
   name: string;
   owner: string;
   addresses: any | null;
-  texts: any | null;
+  text: any | null;
   contenthash: string | null;
 }

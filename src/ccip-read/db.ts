@@ -56,7 +56,7 @@ export const database: Database = {
   async text(name, key, env) {
     try {
       const nameData = await get(name, env);
-      const value = nameData?.texts?.[key] || "";
+      const value = nameData?.text?.[key] || "";
 
       return { value, ttl: TTL };
     } catch (error) {
