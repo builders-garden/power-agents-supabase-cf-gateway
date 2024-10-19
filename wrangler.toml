@@ -1,4 +1,4 @@
-name = "evm-actions-offchain-gateway"
+name = "power-agents-offchain-gateway"
 compatibility_date = "2023-11-18"
 account_id = "777c1961966d76b5af3217e34323afb4"
 main = "./src/index.ts"
